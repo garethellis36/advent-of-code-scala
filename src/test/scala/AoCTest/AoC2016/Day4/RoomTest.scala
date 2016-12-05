@@ -15,9 +15,9 @@ class RoomTest extends FlatSpec with Matchers {
     room.getApparentChecksum should be ("abxyz")
   }
 
-  "A Room" should "have encrypted name aaaaabbbzyx with code aaaaa-bbb-z-y-x-123[abxyz]" in {
+  "A Room" should "have encrypted name aaaaa-bbb-z-y-x with code aaaaa-bbb-z-y-x-123[abxyz]" in {
     val room = Room("aaaaa-bbb-z-y-x-123[abxyz]")
-    room.getEncryptedName should be ("aaaaabbbzyx")
+    room.getEncryptedName should be ("aaaaa-bbb-z-y-x")
   }
 
   "A Room" should "have actual checksum abxyz with code aaaaa-bbb-z-y-x-123[abxyz]" in {

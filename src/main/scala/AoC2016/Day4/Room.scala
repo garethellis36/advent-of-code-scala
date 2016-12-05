@@ -12,12 +12,12 @@ class Room(code: String) {
 
   def getApparentChecksum = apparentChecksum
 
-  def getEncryptedName = codePieces.dropRight(1).reduce(_+_)
+  def getEncryptedName = codePieces.dropRight(1).reduce(_+"-"+_)
 
   def getActualChecksum = {
     var chars = Map[Char,Int]()
 
-    getEncryptedName.foreach(char => {
+    getEncryptedName.replace("-", "").foreach(char => {
 
       if (chars.contains(char))
         chars = chars + (char -> (chars(char) + 1))

@@ -40,6 +40,9 @@ object PuzzleRunner extends App {
     else if (year == 2016 && day == 4 && puzzle == 1)
       AoC2016.Day4.Puzzle1(inputFile)
 
+    else if (year == 2016 && day == 4 && puzzle == 2)
+      AoC2016.Day4.Puzzle2(inputFile)
+
     else
       println("Puzzle not found")
   }
