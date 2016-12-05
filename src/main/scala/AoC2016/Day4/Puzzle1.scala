@@ -12,7 +12,7 @@ object Puzzle1 {
       rooms = Room(str) :: rooms
     })
 
-    val sum = rooms.filter(!_.isRealRoom).map(_.getSectorId).sum
+    val sum = rooms.filter(_.isRealRoom).map(_.getSectorId).sum
 
     println("Sum of sector IDs: " + sum)
 

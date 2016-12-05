@@ -25,7 +25,7 @@ class Room(code: String) {
         chars = chars + (char -> 1)
     })
 
-    chars.toSeq.sortWith(sortChars).toList.map(_._1.toString).reduce(_+_)
+    chars.toSeq.sortWith(sortChars).toList.take(5).map(_._1.toString).reduce(_+_)
   }
 
   def isRealRoom = { getApparentChecksum == getActualChecksum }
